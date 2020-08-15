@@ -1,3 +1,4 @@
+@using System.Globalization
 @model PiesListViewModel
 
 @{
@@ -5,19 +6,18 @@
 }
 
 <h1>@Model.CurrentCategory</h1>
+<div class="d-flex flex-wrap">
 @foreach (var pie in Model.Pies)
 {
-    <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="thumbnail">
-            <img src="@pie.ImageThumbnailUrl" alt="">
-            <div class="caption">
-                <h3 class="float-right">@pie.Price.ToString()</h3>
-                <h3>
-                    <a href="">@pie.Name</a>
-                </h3>
-                <p>@pie.ShortDescription</p>
-            </div>
+    <div class="card m-5 d-flex ">
+        <img src="@pie.ImageThumbnailUrl" alt="">
+        <div class="card-body">
+            <h3 class="float-right">@pie.Price.ToString("F2",CultureInfo.CurrentCulture)</h3>
+            <h3 class="card-title">
+                <a href="">@pie.Name</a>
+            </h3>
+            <p class="card-text">@pie.ShortDescription</p>
         </div>
     </div>
 }
-
+</div>
