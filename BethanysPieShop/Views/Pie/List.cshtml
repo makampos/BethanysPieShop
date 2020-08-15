@@ -14,8 +14,9 @@
         <div class="card-body">
             <h3 class="float-right">@pie.Price.ToString("F2",CultureInfo.CurrentCulture)</h3>
             <h3 class="card-title">
-                <a href="">@pie.Name</a>
+                <a asp-controller="Pie" asp-action="Details" asp-route-id="@pie.PieId">@pie.Name</a>
             </h3>
+            <p class="card-text">@pie.Category.CategoryName</p>
             <p class="card-text">@pie.ShortDescription</p>
         </div>
     </div>
