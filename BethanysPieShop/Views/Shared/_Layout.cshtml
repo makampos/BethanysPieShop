@@ -13,6 +13,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
       <a class="navbar-brand" asp-controller="Home" asp-action="Index">Home</a>
+      <a class="navbar-brand" asp-controller="Contact" asp-action="Index">Contact</a>
       @await Component.InvokeAsync("CategoryMenu")
       @await Component.InvokeAsync("ShoppingCartSummary")
   </div>
