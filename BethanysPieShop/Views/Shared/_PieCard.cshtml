@@ -4,7 +4,7 @@
 <div class="card m-5 d-flex ">
     <img src="@Model.ImageThumbnailUrl" alt="">
     <div class="card-body">
-        <h3 class="float-right">@Model.Price.ToString("F2",CultureInfo.CurrentCulture)</h3>
+        <h3 class="float-right">@Model.Price.ToString("c")</h3>
         <h3 class="card-title">
             <a asp-controller="Pie" asp-action="Details" asp-route-id="@Model.PieId">@Model.Name</a>
         </h3>
